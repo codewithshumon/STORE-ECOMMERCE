@@ -114,3 +114,306 @@ h4 {
     margin-top: 0 auto;
     padding: 0 0.94em;
 }
+
+.column {
+    margin-left: -0.94em;
+    margin-right: -0.94em;    
+}
+
+.column .row {
+    padding: 0 0.94em;
+}
+
+.flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexitem {
+    display: flex;
+    align-items: center;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
+/* 
+Structure Styling
+
+00. Reusable Selector
+
+01. HEADER
+  a. Header Top
+  b. Header nav
+  c. Header Main, Departments Catagory
+  d. Search form
+  e. Responsive Manu off canvas
+
+02. SLIDER 
+03. BRANDS
+04. PRODUCTS
+  a. Global Products
+  b. BIG Products
+  c. MINI Products
+  d. MAIN Products
+05. BANNER
+  a. News Latter
+  b. Wigets 
+  c. Footer Info
+06. BOTTOM MANU
+  a. Search 
+07. OVERLAY
+08. PAGE SINGLE
+  a. Breadcrumb
+  b. Product details
+  c. Product Discription
+  d. Product Review
+  e. Product Review form
+09. PAGE SINGLE: SPECIAL OFFER
+10. PAGE CATAGORY
+  a. Sliderbar Products Filter
+  b. Products Blocks
+11. CART 
+12. PAGE CART
+13. PAGE CHECKOUT
+14. MODAL 
+15. RESPONSIVE */
+
+  
+
+
+
+/* 01. HEADER
+  a. Header Top */
+
+
+
+
+
+
+
+/* 01. HEADER
+  b. Header nav */
+
+
+
+
+
+/* 01. HEADER
+  c. Header Main, Departments Catagory */
+
+
+
+
+ 
+/* 01. HEADER
+  d. Search form */
+
+
+
+
+
+/* 01. HEADER
+  e. Responsive Manu off canvas */
+
+
+
+
+
+/* 02. SLIDER  */
+
+
+
+
+/* 03. BRANDS */
+
+
+
+
+
+/* 04. PRODUCTS
+  a. Global Products */
+
+
+
+
+/*04. PRODUCTS
+  b. BIG Products */
+  
+
+
+
+/*   
+  04. PRODUCTS
+  c. MINI Products */
+
+
+
+
+
+
+
+  /* 04. PRODUCTS
+  d. MAIN Products */
+
+
+
+
+
+
+
+
+  /* 05. BANNER
+  a. News Latter */
+  
+
+
+
+
+
+  
+  /* 05. BANNER
+  b. Wigets  */
+
+
+
+
+
+
+  /* 05. BANNER
+  c. Footer Info */
+
+
+
+
+/* 
+06. BOTTOM MANU
+  a. Search  */
+
+
+
+
+
+  /* 07. OVERLAY */
+
+
+
+
+
+  /* 08. PAGE SINGLE
+  a. Breadcrumb */
+
+
+
+
+
+  /* 08. PAGE SINGLE
+  b. Product details */
+
+
+
+
+
+  /* 08. PAGE SINGLE
+  c. Product Discription */
+
+
+
+
+
+
+
+  /* 08. PAGE SINGLE
+  d. Product Review */
+
+
+
+
+
+  /* 08. PAGE SINGLE
+  e. Product Review form */
+
+
+
+
+
+
+
+/* 09. PAGE SINGLE: SPECIAL OFFER */
+
+
+
+
+
+
+
+/* 10. PAGE CATAGORY
+  a. Sliderbar Products Filter */
+
+
+
+
+
+
+
+  /* 10. PAGE CATAGORY
+  b. Products Blocks */
+
+
+
+
+
+
+
+/* 11. CART  */
+
+
+
+
+
+
+
+/* 12. PAGE CART */
+
+
+
+
+
+
+
+/* 13. PAGE CHECKOUT */
+
+
+
+
+
+
+
+/* 14. MODAL  */
+
+
+
+
+
+
+/* 15. RESPONSIVE */ 
+
+
+
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 2em;
+    }
+}
