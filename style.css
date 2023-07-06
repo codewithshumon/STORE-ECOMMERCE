@@ -176,19 +176,62 @@ h4 {
   padding: 0 0.75em 0 0;
 }
 
-
-.object-cover img {
-  position: absolute;
-  object-fit: cover;
+/* .object-cover {
+  object-fit: contain;
   width: var(--percent100);
   height: var(--percent100);
-  display: block;
 }
 
 .product .media {
   position: relative;
   flex-shrink: 0;
   overflow: hidden;
+} */
+
+.primary-button, .secondary-button .light-button {
+  font-size: var(--font-small);
+  padding: .8em;
+  height: auto;
+  width: fit-content;
+  border-radius: 2em;
+  transform: var(--trans-background-color)
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.primary-button:hover {
+  background-color: lightgreen;
+}
+
+
+.secondary-button {
+  background-color: var(--secondary-dark-color);
+  color: var(--white-color);
+}
+.secondary-button::hover{
+  background-color: var(--light-bg-color);
+  color: var(--secondary-dark-color);
+
+}
+
+.light-button {
+  background-color: var(--light-bg-color);
+}
+.light-button::hover {
+  background-color: var(--secondary-dark-color);
+  color: var(--white-color);
+}
+
+
+.view-all {
+  font-size: var(--font-small);
+  font-weight: var(--fw5);
+  display: flex;
+  gap: 3em;
+  padding: 0;
+  transition: var(--trans-color);
 }
 
 
@@ -303,6 +346,9 @@ header li > a {
 }
 
 
+
+/* mega manu */
+
 nav .mega{
   position: absolute;
   width: var(--percent100);
@@ -315,14 +361,19 @@ nav .mega{
   background-color: var(--light-bg-color);
   box-shadow: rgb(0 0 0 / 20%) 0 30px 20px -30px;
   z-index: 100;
+
+  display: none;
 }
+
+nav li.has-chaild:hover .mega {
+  display: block;
+}
+
 
 nav .mega .wrapper {
   display: flex;
 
 }
-
-
 
 nav .mega h4 {
   font-size: 1em;
@@ -346,18 +397,42 @@ nav .mega .view-all {
   margin-top: 1em;
 }
 
-
 nav .mega .product {
-  flex: 2;
   padding: 0;
   align-items: center;
   position: relative;
+
 }
 
+nav .mega .product .row {
+  width: var(--percent100);
+}
 
-nav .mega .product .media {
+/* nav .mega .product .media {
   height: 400px;
+} */
+
+nav .mega .product .text-content {
+  line-height: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  position: absolute;
+  bottom: 5em;
+  width: var(--percent100);
+
 }
+
+nav .mega .product .text-content h4 {
+  font-size: 2em;
+  font-weight: var(--fw8);
+  text-align: center;
+  color: var(--secondary-dark-color);
+}
+
+
 
 
 
