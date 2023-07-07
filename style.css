@@ -168,7 +168,7 @@ h4 {
 
 .icon-small {
   font-size: 1.25em;
-  margin: auto;
+  margin-left: auto;
 }
 
 .icon-large {
@@ -309,9 +309,7 @@ header li > a {
 }
 
 
-.mobile-hide {
-  display: none;
-}
+
 
 
 .header-top ul ul {
@@ -536,6 +534,215 @@ nav .fly-item {
 /* 01. HEADER
   c. Header Main, Departments Catagory */
 
+  .header-main {
+    background-color: var(--secondary-dark-color);
+    padding: 1.5em 0;
+    margin-bottom: 2em;
+  }
+
+  .dpt-cart {
+    position: relative;
+    z-index: 10;
+  }
+
+  .dpt-cart .dpt-head {
+    position: relative;
+    width: 300px;
+    padding: .75em 1.5em;
+    background-color: var(--primary-color);
+    border-radius: 7px 7px 0 0;
+    color: var(--white-color);
+    margin-bottom: -2.3em;
+
+  }
+
+  .dpt-cart .dpt-head .mini-text {
+    color: var(--light-bg-color);
+    
+  }
+
+  .dpt-cart .dpt-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .mini-text {
+    font-size: var(--font-smaller);
+    color: light var(--light-text-color);
+  }
+
+  .header-main .right {
+    flex: 1;
+    min-width: 600px;
+    margin-left: 5%;
+    
+  }
+
+
+ 
+  form {
+    position: relative;
+
+  }
+
+
+
+  form.search input {
+    line-height: 3em;
+    padding: .5em 4.5em;
+    border: 0;
+    outline: 0;
+    width: var(--percent100);
+    border-radius: 7px;
+    font-size: .8em;
+    font-weight: var(--fw5)
+  }
+
+  form.search :where(span,button) {
+
+    position: absolute;
+    height: var(--percent100);
+    top: 0;
+    font-size: 1em;
+    padding: 0 1.5em;
+    font-weight: var(--fw6);
+    color: var(--primary-color);
+
+  }
+
+
+
+  form.search button {
+    right: -4px;
+    border: 0;
+    outline: 0;
+    border-radius: 0 7px 7px 0;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--trans-background);
+  } 
+
+  form.search button:hover {
+    background-color: var(--dark-color);
+  }
+
+
+
+
+   /* Departments Catagory */
+
+   .dpt-menu {
+    position: absolute;
+    top: var(--percent100);
+    width: 300px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    border-bottom: 0;
+
+   }
+
+   .dpt-menu .has-chaild > a {
+    display: flex;
+    padding: 1.5em 1.5em;
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font-small);
+    height: 35px;
+    align-items: center;
+   }
+
+   .dpt-menu .has-chaild > ul, .dpt-menu .mega {
+    position: absolute;
+    top: 0;
+    left: var(--percent100);
+    width: var(--percent100);
+    height: var(--percent100);
+    min-height: var(--percent100);
+    padding: 1.5em;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    line-height: 2em;
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    display: none;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+
+   .dpt-menu .mega .row {
+    line-height: 1.7em;
+   }
+
+
+   /* showing the first sub manue */
+
+   .dpt-menu .has-chaild:hover .mega {
+    display: block;
+   }
+
+   .dpt-menu .has-chaild:hover ul {
+    display: block;
+   }
+
+   .dpt-menu .has-chaild li a:hover{
+    text-decoration: underline;
+   }
+
+   .dpt-menu .beauty ul {
+    background-image: url(./asset/menu/menu_bg1.jpg);
+    
+   }
+   .dpt-menu .electric ul {
+    background-image: url(./asset/menu/menu_bg2.jpg);
+    
+   }
+   .dpt-menu .fashion ul {
+    background-image: url(./asset/menu/menu_bg3.jpg);
+    
+   }
+   .dpt-menu .homekit .mega {
+    background-image: url(./asset/menu/menu_bg4.jpg);
+    
+   }
+
+  
+  
+ 
+/*    
+   .dpt-menu .has-chaild > :where(ul,.mega)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+   }
+
+   .dpt-menu .mega {
+    width: auto;
+    min-width: var(--percent100);
+    display: flex;
+   } */
+
+
+
+
+
+
+
 
 
 
@@ -745,7 +952,7 @@ nav .fly-item {
     }
 
     .mobile-hide {
-      display: block;
+      display: none;
     }
 
     .logo a {
