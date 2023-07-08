@@ -13,7 +13,7 @@ function copyMenu ( ) {
      navPlace.innerHTML = mainNav.innerHTML;
      
      //copy inside desk topnav to mobile topnav
-     let topNav = document.querySelector('.header-top');
+     let topNav = document.querySelector('.header-top .wrapper');
      let topPlace = document.querySelector('.off-canvas .thetop-nav');
      topPlace.innerHTML = topNav.innerHTML;
 
