@@ -21,3 +21,32 @@ function copyMenu ( ) {
 }
 
 copyMenu()
+
+//show mobile menu
+
+const menuButton = document.querySelector('.trigger');
+const closeButton = document.querySelector('.t-close');
+const addClass = document.querySelector('.site');
+
+menuButton.addEventListener('click', function() {
+    addClass.classList.toggle('showmenu')
+});
+
+closeButton.addEventListener('click', function(){
+    addClass.classList.toggle('showmenu')
+})
+
+
+
+//show sub menu on mobile
+const subMenu = document.querySelectorAll('.has-chaild .icon-small');
+
+subMenu.forEach((menu) => menu.addEventListener('click', toggle));
+
+function toggle(e) {
+    e.preventDefault();
+    subMenu.forEach((iitem) => iitem != this ? iitem.closest('.has-chaild').classList.remove('expand') : null);
+    if (this.closest('.has-chaild').classList != 'expand') {
+        this.closest('.has-chaild').classList.toggle('expand')
+    }
+}

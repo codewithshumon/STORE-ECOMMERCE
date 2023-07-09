@@ -107,8 +107,6 @@ h4 {
 
 
 
-
-
 /* REUSEBLE SELECTOR */
 
 .container {
@@ -225,23 +223,36 @@ h4 {
 
 
 nav .fly-item {
+  position: relative;
   width: 32px;
   height: 18px;
   border-radius: 3px;
   background-color: var(--primary-color);
-  z-index: -1;
-}
-
-.fly-item {
-  position: relative;
   top: -10px;
   font-size: var(--font-smaller);
-  padding: 3px;
+  padding: 3.5px;
   text-align: center;
   line-height: 10px;
   color: var(--white-color);
-  
+  z-index: -1;
 }
+
+
+.icon-large .fly-item {
+  position: absolute;
+  top: -6px;
+  left: 21px;
+  width: 1.75em;
+  height: 1.75em;
+  padding: 1.5px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--secondary-dark-color);
+  border-radius: var(--percent100);
+  z-index: -1;
+}
+
 
 
 
@@ -291,6 +302,23 @@ nav .fly-item {
   transition: var(--trans-color);
 }
 
+
+.header-top li:hover ul {
+  display: block;
+}
+
+:where(.header-top, .thetop-nav) .right ul ul li a {
+  padding: 0.25em 1em;
+}
+
+/* .header-top .right ul ul li.current a, .thetop-nav .right ul ul li.current a {
+  background-color: var(--border-color);
+} */
+
+
+:where(.header-top, .thetop-nav) .right ul ul li.current a {
+  background-color: var(--border-color);
+}
 
 
 
@@ -347,6 +375,14 @@ Structure Styling
 /* 01. HEADER
   e. Responsive Manu off canvas */
 
+
+/*   
+.site .site-off {
+   display: none;
+}
+   */
+
+
 .site-off {
   position: fixed;
   width: 320px;
@@ -354,6 +390,16 @@ Structure Styling
   background-color: var(--white-color);
   overflow-y: auto;
   z-index: 1000;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform .4s visibility .4s;
+  will-change: transform, visibility;
+}
+
+.showmenu .site-off {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform .4s 0s, visibility 0s 0s;
 }
 
 .off-canvas {
@@ -416,27 +462,27 @@ Structure Styling
   font-weight: var(--fw3);
   line-height: 25px;
   padding-left: 4em;
+
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.off-canvas .thetop-nav ul, .off-canvas nav ul {
+.off-canvas .expand :where(ul, .mega) {
+  max-height: 2000px;
+}
+
+.off-canvas .thetop-nav ul, .off-canvas nav > ul {
   flex-direction: column;
   align-items: flex-start;
   font-size: var(--font-small);
   line-height: 25px;
   padding-top: 1.25em;
+  margin: 1.25em 0;
   border-top: 1px solid var(--border-color);
 
-}
-
-.off-canvas .thetop-nav .flexitem > li > a {
-  font-size: 16px;
-}
-
-.off-canvas nav li {
-  font-size: 16px;
-}
-
-
+} 
 
 .off-canvas nav .mega {
   padding: 0;
@@ -454,6 +500,27 @@ Structure Styling
 
 .off-canvas .dpt-menu .icon-small {
   transform: rotate(90deg);
+}
+
+.off-canvas .has-chaild {
+  width: var(--percent100);
+}
+
+
+.off-canvas .thetop-nav .right > ul > :where(li:nth-child(5), li:nth-child(6)) > a {
+  display: none;
+}
+
+.off-canvas .thetop-nav .right ul ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.off-canvas .thetop-nav .right ul ul li a {
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+  line-height: 16px;
+  margin: 0 0.5em 0.5em 0;
 }
 
 
@@ -772,18 +839,6 @@ Structure Styling
   display: none;
 }
 
-.header-top li:hover ul {
-  display: block;
-}
-
-.header-top .right ul ul li a {
-  padding: 0.25em 1em;
-}
-
-.header-top .right ul ul li.current a {
-  background-color: var(--border-color);
-}
-
 
 .mega .flexcol {
   flex: 1;
@@ -910,15 +965,6 @@ nav .mega .product .text-content h4 {
   display: flex; 
   align-items: center;
 }
-
-
-.header-nav .right .fly-item {
-  top: -8px;
-  width: 16px;
-  background-color: var(--secondary-dark-color);
-  border-radius: var(--percent50);
-}
-
 
 
 
