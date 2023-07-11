@@ -529,6 +529,51 @@ Structure Styling
 
 /* 02. SLIDER  */
 
+.slider> div > .wrapper {
+  width: calc(100% - (300px + 2em));
+  margin-left: auto;
+}
+
+.slider .item {
+  position: relative;
+  height: 410px;
+}
+
+.slider .item img {
+  height: 410px;
+  width: var(--percent100);
+
+}
+
+.slider .text-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 3% 10%;
+  gap: 7.5px;
+  z-index: 1;
+}
+.slider h4 {
+  font-size: var(--font-small);
+  font-weight: var(--fw7);
+  width: fit-content;
+  padding: 4px 10px;
+  background-color: var(--dark-color);
+  border-radius: 5px;
+  color: var(--white-color);
+}
+
+.slider .text-content span:first-child {
+  font-weight: var(--fw3);
+  columns: var(--light-text-color);
+
+}
+
+.slider .text-content span:last-child {
+  color: var(--secondary-dark-color);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
 
 
 

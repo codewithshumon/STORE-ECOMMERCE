@@ -50,3 +50,16 @@ function toggle(e) {
         this.closest('.has-chaild').classList.toggle('expand')
     }
 }
+
+
+
+
+const swiper = new Swiper('.swiper', {
+
+    loop: true,
+    
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+  });
