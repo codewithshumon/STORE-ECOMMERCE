@@ -66,7 +66,6 @@ ul {
 
 img {
     max-width: var(--percent100);
-    vertical-align: middle;
 }
 
 strong {
@@ -529,21 +528,40 @@ Structure Styling
 
 /* 02. SLIDER  */
 
+
+
 .slider> div > .wrapper {
   width: calc(100% - (300px + 2em));
   margin-left: auto;
 }
 
+
+
 .slider .item {
   position: relative;
   height: 410px;
+  width: var(--percent100);
+
 }
 
 .slider .item img {
   height: 410px;
   width: var(--percent100);
+  object-fit: cover;
 
+  flex-grow: 1;
+  width: 100%;
+  max-width: 900px;
+  
 }
+
+.swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 
 .slider .text-content {
   position: absolute;
