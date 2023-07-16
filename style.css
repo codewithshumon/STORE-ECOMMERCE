@@ -64,6 +64,7 @@ ul {
     list-style: none;
 }
 
+
 img {
     max-width: var(--percent100);
 }
@@ -532,17 +533,18 @@ Structure Styling
 
 .slider .item {
   position: relative;
-  height: 410px;
+  height: 408px;
   width: var(--percent100);
 
 }
 
 .slider .item img {
-  height: 410px;
+  height: 408px;
   width: var(--percent100);
   object-fit: cover;
   
 }
+
 
 .slider .item::before {
   content: '';
@@ -596,7 +598,20 @@ Structure Styling
 
 /* 03. BRANDS */
 
+.brands .wrapper {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
 
+.brands .item img {
+  scale: 1;
+  transition: scale .3s;
+}
+
+.brands .item a:hover img  {
+  scale: 1.1;
+}
 
 
 
