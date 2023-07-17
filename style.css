@@ -849,9 +849,13 @@ Structure Styling
     padding: 2.5em;
     border: 1px solid var(--secondary-dark-color);
     border-radius: 7px;
-    min-width: 400px;
+    min-width: 300px;
     margin: 0 auto;
 
+  }
+
+  .products.big .image {
+    max-height: 403px;
   }
   
 
@@ -1130,22 +1134,64 @@ Structure Styling
 
 
 
+@media screen and (max-width: 1042px) {
+
+  .header-nav .mobile-hide ul.second-links li > a {
+    margin: 0;
+    max-width: 60px;
+  }
 
 
 
 
 
+  .brands .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc(33.33% - 10px);
+  }
+  
+  .products.mini .media {
+    min-width: 70px;
+    min-height: 100px;
+    max-height: 150px;
+    overflow: hidden;
+    margin-right: 1.25em;
+  }
+
+  .products .content {
+    min-width: 50px;
+    min-height: 100px;
+    max-height: 150px;
+
+  }
+  .products.big .item {
+    min-width: 50px;
+    max-width: 200px;
+  }
+   
+
+  .trending .flexwrap {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+  }
+  
+  /* Flex as a column */
+  .trending .row.products {
+    display: flex;
+    flex-direction: column;
+  }
 
 
 
+}
 
 
 
-
-/* mim screen styled */
-
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1400px) {
 
   .desktop-hide {
     display: none;
@@ -1521,13 +1567,25 @@ nav .mega .product .text-content h4 {
 }
 
 .products.big .media {
-  height: 375px;
   overflow: hidden;
   
 }
 
 
-
     
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* mim screen styled */
+
