@@ -53,6 +53,7 @@ body {
     line-height: 1.4;
     color: var(--dark-color);
     background-color: var(--white-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -778,7 +779,7 @@ Structure Styling
     flex-direction: column;
   }
 
-  .products:where(.big, .main.one) .content {
+  .products:where(.big, .main, .one) .content {
     gap: 1em;
     margin-top: 1.25em;
   }
@@ -911,6 +912,54 @@ Structure Styling
 
   /* 04. PRODUCTS
   d. MAIN Products */
+
+  .products.main .item {
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 0 1em;
+    padding-bottom: 2em;
+    
+  }
+
+  .products.main .media {
+    min-height: 450px;
+    margin-bottom: 1em;
+  }
+
+
+  .products.main .footer {
+    position: absolute;
+    top: var(--percent50);
+    left: 0;
+    right: 0;
+    padding: 0 1em 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    background: linear-gradient(0deg, var(--light-bg-color) 0%, var(--white-color) 70%);
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity;
+    transition: all .2s ease-in-out;
+
+  }
+
+  .products.main .footer ul {
+    list-style: disc;
+    padding: 1.25em 0 0 1.25em;
+    line-height: 1.8;
+
+  }
+
+
+  .products.main .item:hover .footer {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .products.main .item:hover .footer {
+
+  }
+
 
 
 
@@ -1060,260 +1109,6 @@ Structure Styling
 
 
 
-
-
-
-@media screen and (max-width: 450px) {
-
-body {
-  overflow-x: hidden;
-}
-
-.desktop-hide {
-  display: block;
-}
-
-.mobile-hide {
-  display: none;
-}
-
-.header-nav {
-  padding: 0;
-  margin: 0;
-  border-bottom: 0;
-}
-
-.header-nav .right li > a {
-  margin-left: 1em;
-}
-
-.header-nav {
-  padding: 0.5em 0;
-  margin: 1em 1.5em 0;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.trigger {
-  font-size: 1.5em;
-  display: flex;
-  padding: 0.25em;
-  margin: 0.5em;
-  margin-left: -1em;
-}
-
-.logo a {
-  margin-right: 3.5em;
-  margin-left: -.5em;
-}
-
-
-.iscart {
-  display: flex;
-  font-weight: var(--fw6);
-}
-
-.iscart .mini-text {
-  font-size: var(--font-small);
-  color: light var(--light-text-color);
-  font-weight: var(--fw3);
-}
-
-
-
-.trending .products.mini .item {
-  padding: 0 2em ;
-}
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 767px) {
-  
-
-  
-
-.desktop-hide {
-  display: block;
-}
-
-.mobile-hide {
-  display: none;
-}
-
-.header-nav {
-  padding: 0;
-  margin: 0;
-  border-bottom: 0;
-}
-
-.header-nav .right li > a {
-  margin-left: 1em;
-}
-
-.header-nav {
-  padding: 0.5em 0;
-  margin: 1em 1.5em 0;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.trigger {
-  font-size: 1.5em;
-  display: flex;
-  padding: 0.25em;
-  margin: 0.5em;
-  margin-left: -1em;
-}
-
-.iscart .mini-text {
-  font-size: var(--font-small);
-  color: light var(--light-text-color);
-  font-weight: var(--fw3);
-}
-
-.logo a {
-  margin-right: 3.5em;
-  margin-left: -.5em;
-}
-
-.header-nav {
-  width: 650px;
-}
-.iscart {
-  display: flex;
-  font-weight: var(--fw6);
-}
-
-.header-nav .iscart {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  right: 35px;
-  top: 35px;
-  
-}
-
-
-.header-top .iscart:where(.icon-large, .icon-text) {
-  width: var(--percent100);
-  right: 0;
-}
-
-.trending .products.big .item {
-  min-width: 300px;
-  max-width: 700px;
-  max-height: 1100px;
-  margin: 0 3em;
-  margin-bottom: 2em;
-
-}
-
-
-.trending .products.big item{
-  padding: 2em 7em;
-
-}
-
-.trending .products.mini {
-  flex: 0 0 50%;
-
-}
-
-
-
-.products .price .current {
-  font-size: 1.25em;
-
-
-
-}
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1042px) {
-
-  .header-nav .mobile-hide ul.second-links li > a {
-    margin: 0;
-    max-width: 60px;
-  }
-
-  .header-main .search-box {
-    max-width: 400px;
-  }
-
-
-
-  .brands .item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: calc(33.33% - 10px);
-  }
-  
-  .products.mini .media {
-    min-width: 70px;
-    min-height: 100px;
-    max-height: 150px;
-    overflow: hidden;
-    margin-right: 1.25em;
-  }
-
-  .products .content {
-    min-width: 50px;
-    min-height: 100px;
-    max-height: 200px;
-
-  }
-
-  .products.big .item {
-    min-width: 50px;
-    max-width: 200px;
-  }
-   
-
-  .trending .flexwrap {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    min-width: 100px;
-  }
-  
-  /* Flex as a column */
-  .trending .row.products {
-    display: flex;
-    flex-direction: column;
-  }
-
-
-
-}
 
 
 
@@ -1693,10 +1488,327 @@ nav .mega .product .text-content h4 {
 }
 
 
+.products.main .item {
+  flex: 0 0 25%;
+
+}
+
+
+
+
+
+
     
 
 }
 
+
+
+
+
+@media screen and (max-width: 1042px) {
+
+  .header-nav .mobile-hide ul.second-links li > a {
+    margin: 0;
+    max-width: 60px;
+  }
+
+  .header-main .search-box {
+    max-width: 400px;
+  }
+
+
+
+  .brands .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc(33.33% - 10px);
+  }
+  
+  .products.mini .media {
+    min-width: 70px;
+    min-height: 100px;
+    max-height: 150px;
+    overflow: hidden;
+    margin-right: 1.25em;
+  }
+
+  .products .content {
+    min-width: 50px;
+    min-height: 100px;
+    max-height: 200px;
+
+  }
+
+  .products.big .item {
+    min-width: 50px;
+    max-width: 200px;
+  }
+   
+
+  .trending .flexwrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+  }
+  
+  /* Flex as a column */
+  .trending .row.products {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products.main .item {
+    flex: 0 0 33.3333%;
+  
+  }
+  
+
+ 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  
+
+  
+
+  .desktop-hide {
+    display: block;
+  }
+  
+  .mobile-hide {
+    display: none;
+  }
+  
+  .header-nav {
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
+  }
+  
+  .header-nav .right li > a {
+    margin-left: 1em;
+  }
+  
+  .header-nav {
+    padding: 0.5em 0;
+    margin: 1em 1.5em 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .trigger {
+    font-size: 1.5em;
+    display: flex;
+    padding: 0.25em;
+    margin: 0.5em;
+    margin-left: -1em;
+  }
+  
+  .iscart .mini-text {
+    font-size: var(--font-small);
+    color: light var(--light-text-color);
+    font-weight: var(--fw3);
+  }
+  
+  .logo a {
+    margin-right: 3.5em;
+    margin-left: -.5em;
+  }
+  
+  .header-nav {
+    width: 650px;
+  }
+  .iscart {
+    display: flex;
+    font-weight: var(--fw6);
+  }
+  
+  .header-nav .iscart {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 35px;
+    top: 35px;
+    
+  }
+  
+  
+  .header-top .iscart:where(.icon-large, .icon-text) {
+    width: var(--percent100);
+    right: 0;
+  }
+  
+  .trending .products.big .item {
+    min-width: 300px;
+    max-width: 700px;
+    max-height: 1100px;
+    margin: 0 3em;
+    margin-bottom: 2em;
+  
+  }
+  
+  
+  .trending .products.big item{
+    padding: 2em 7em;
+  
+  }
+  
+  .trending .products.mini {
+    flex: 0 0 50%;
+  
+  }
+  
+  
+  
+  .products .price .current {
+    font-size: 1.25em;
+  
+  
+  
+  }
+
+
+  .trending .products.big .image {
+    
+    max-height: 600px;
+
+  }
+
+
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  }
+
+
+  @media screen and (min-width: 451px) and (max-width: 590px) {
+
+    .products.main .item {
+      flex: 0 0 50%;
+    }
+
+
+    .trending .products.big .item {
+      margin: 1em 1em 2em;
+    }
+
+
+
+  }
+  
+  
+  
+
+  
+
+
+
+@media screen and (max-width: 450px)  {
+
+  body {
+    overflow-x: hidden;
+  }
+  
+  .desktop-hide {
+    display: block;
+  }
+  
+  .mobile-hide {
+    display: none;
+  }
+  
+  .header-nav {
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
+  }
+  
+  .header-nav .right li > a {
+    margin-left: 1em;
+  }
+  
+  .header-nav {
+    padding: 0.5em 0;
+    margin: 1em 1.5em 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .trigger {
+    font-size: 1.5em;
+    display: flex;
+    padding: 0.25em;
+    margin: 0.5em;
+    margin-left: -1em;
+  }
+  
+  .logo a {
+    margin-right: 3.5em;
+    margin-left: -.5em;
+  }
+  
+  
+  .iscart {
+    display: flex;
+    font-weight: var(--fw6);
+  }
+  
+  .iscart .mini-text {
+    font-size: var(--font-small);
+    color: light var(--light-text-color);
+    font-weight: var(--fw3);
+  }
+  
+  
+  
+  .trending .products.mini .item {
+    padding: 0 2em ;
+  }
+  
+
+  
+  .trending .products.big .item {
+    margin: 1em 1em 2em;
+  }
+
+  .products.main .item {
+    flex: 0 0 100%;
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
 
 
 
