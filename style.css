@@ -596,17 +596,19 @@ Structure Styling
   color: var(--white-color);
 }
 
-.slider .text-content span:first-child {
+.text-content :where(h2, h3) span:first-child {
   font-weight: var(--fw3);
-  columns: var(--light-text-color);
+  color: var(--light-text-color);
 
 }
 
-.slider .text-content span:last-child {
+.slider .text-content :where(h2, h3) span:last-child {
   color: var(--secondary-dark-color);
   text-transform: uppercase;
   letter-spacing: -1px;
 }
+
+
 .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--secondary-dark-color);
 }
@@ -956,21 +958,54 @@ Structure Styling
     visibility: visible;
   }
 
-  .products.main .item:hover .footer {
-
-  }
-
-
-
-
-
-
-
-
+  
 
   /* 05. BANNER
   a. News Latter */
   
+  .banners .item {
+    position: relative;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+  }
+
+  .banner .image {
+    text-align: right;
+
+  }
+
+  .banner .get-gray {
+    background-color: var(--border-color);
+  }
+
+  .banner :where(.text-content, .over-link) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--percent100);
+    height: var(--percent100);
+
+  }
+
+  .banner .text-content {
+    padding: 1.5em 2.5em;
+  }
+
+
+  .banner h3 {
+    font-size: calc(1em + 0.5vw);
+    font-weight: var(--fw3);
+  }
+
+  .banner h4 span {
+    font-size: 80%;
+  } 
+
+  .banner .primary-button {
+    z-index: 3;
+  }
+
+
 
 
 
@@ -1666,7 +1701,7 @@ nav .mega .product .text-content h4 {
   
   }
   
-  .trending .products.mini {
+  .trending .products.mini, .banner .row {
     flex: 0 0 50%;
   
   }
