@@ -962,6 +962,13 @@ Structure Styling
 
   /* 05. BANNER
   a. News Latter */
+
+  .banner .row {
+    width: var(--percent100);
+    margin-bottom: 2em;
+    
+  }
+    
   
   .banners .item {
     position: relative;
@@ -1005,6 +1012,38 @@ Structure Styling
     z-index: 3;
   }
 
+
+  /* product catagories */
+  .product-catagories .row {
+    margin-bottom: 1em;
+
+  }
+
+  .banners .product-catagories .item {
+    display: flex;
+    padding: 1.5em;
+    min-width: 150px;
+  }
+
+  .banners .product-catagories .image {
+    min-width: 100px;
+  }
+
+  .mini-links ul {
+    font-size: var(--font-small);
+    color: light var(--light-text-color);
+    margin-top: 1em;
+
+  }
+
+  .banners .second-links {
+    margin-top: 2em;
+
+  }
+
+  .mini-links ul a:hover {
+    text-decoration: underline;
+  }
 
 
 
@@ -1518,7 +1557,7 @@ nav .mega .product .text-content h4 {
 
 
 /* product style */
-.trending .products {
+.trending .products, .product-catagories .row {
   flex: 0 0 33.3333%;
 }
 
@@ -1529,9 +1568,9 @@ nav .mega .product .text-content h4 {
 }
 
 
-
-
-
+.banner .row {
+  flex: 0 0 50%;
+}
 
     
 
@@ -1595,10 +1634,11 @@ nav .mega .product .text-content h4 {
     flex-direction: column;
   }
 
-  .products.main .item {
+  .products.main .item, .product-catagories .row {
     flex: 0 0 33.3333%;
   
   }
+
   
 
  
@@ -1687,7 +1727,6 @@ nav .mega .product .text-content h4 {
   }
   
   .trending .products.big .item {
-    min-width: 300px;
     max-width: 700px;
     max-height: 1100px;
     margin: 0 3em;
@@ -1736,10 +1775,11 @@ nav .mega .product .text-content h4 {
   }
 
 
-  @media screen and (min-width: 451px) and (max-width: 590px) {
+  @media screen and (max-width: 590px) {
 
     .products.main .item {
       flex: 0 0 50%;
+
     }
 
 
@@ -1747,7 +1787,12 @@ nav .mega .product .text-content h4 {
       margin: 1em 1em 2em;
     }
 
+    .products.main .item, .product-catagories .row, .banner .row {
+      flex: 0 0 100%;
+    } 
+  
 
+    
 
   }
   
@@ -1819,16 +1864,11 @@ nav .mega .product .text-content h4 {
     padding: 0 2em ;
   }
   
-
   
   .trending .products.big .item {
-    margin: 1em 1em 2em;
-  }
+    margin: 1em 1em 1em;
 
-  .products.main .item {
-    flex: 0 0 100%;
   }
-
   
   
   
