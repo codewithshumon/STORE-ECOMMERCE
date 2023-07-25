@@ -543,6 +543,60 @@ Structure Styling
 
 
 
+/* search */
+
+form {
+  position: relative;
+
+}
+
+
+
+form.search input {
+  line-height: 3em;
+  padding: .5em 4.5em;
+  border: 0;
+  outline: 0;
+  width: var(--percent100);
+  border-radius: 7px;
+  font-size: .8em;
+  font-weight: var(--fw5)
+}
+
+form.search :where(span,button) {
+
+  position: absolute;
+  height: var(--percent100);
+  top: 0;
+  font-size: 1em;
+  padding: 0 1.5em;
+  font-weight: var(--fw6);
+  color: var(--primary-color);
+
+}
+
+
+
+form.search button {
+  right: -4px;
+  border: 0;
+  outline: 0;
+  border-radius: 0 7px 7px 0;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: var(--trans-background);
+} 
+
+form.search button:hover {
+  background-color: var(--dark-color);
+}
+
+
+
+
+
+
 
 /* 02. SLIDER  */
 
@@ -960,8 +1014,7 @@ Structure Styling
 
   
 
-  /* 05. BANNER
-  a. News Latter */
+   /* 05. BANNER */
 
   .banner .row {
     width: var(--percent100);
@@ -1023,10 +1076,11 @@ Structure Styling
     display: flex;
     padding: 1.5em;
     min-width: 150px;
+
   }
 
   .banners .product-catagories .image {
-    min-width: 100px;
+    min-width: 80px;
   }
 
   .mini-links ul {
@@ -1049,10 +1103,47 @@ Structure Styling
 
 
 
+  /* a. News Latter */
+
+  .newsletter {
+    padding: 2em;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+  }
+
+
+  .newsletter h3 {
+    font-size: 1.5em;
+
+  }
+
+  .newsletter p {
+    font-weight: var(--fw3);
+    color: var(--border-color);
+    margin: .5em 0 1em;
+  }
+
+  .newsletter p strong {
+    color: var(--primary-color);
+  }
+
+  .newsletter form {
+    max-width: 500px;
+    width: var(--percent100);
+  }
+
+
+
 
   
   /* 05. BANNER
   b. Wigets  */
+
+  .widgets {
+    padding: 3em 2em;
+    background-color: var(--light-bg-color);
+    margin-bottom: 2em;
+  }
 
 
 
@@ -1421,55 +1512,6 @@ nav .mega .product .text-content h4 {
 
 
  
-  form {
-    position: relative;
-
-  }
-
-
-
-  form.search input {
-    line-height: 3em;
-    padding: .5em 4.5em;
-    border: 0;
-    outline: 0;
-    width: var(--percent100);
-    border-radius: 7px;
-    font-size: .8em;
-    font-weight: var(--fw5)
-  }
-
-  form.search :where(span,button) {
-
-    position: absolute;
-    height: var(--percent100);
-    top: 0;
-    font-size: 1em;
-    padding: 0 1.5em;
-    font-weight: var(--fw6);
-    color: var(--primary-color);
-
-  }
-
-
-
-  form.search button {
-    right: -4px;
-    border: 0;
-    outline: 0;
-    border-radius: 0 7px 7px 0;
-    color: var(--white-color);
-    background-color: var(--primary-color);
-    cursor: pointer;
-    transition: var(--trans-background);
-  } 
-
-  form.search button:hover {
-    background-color: var(--dark-color);
-  }
-
-
-
 
    /* Departments Catagory */
 
@@ -1562,7 +1604,7 @@ nav .mega .product .text-content h4 {
 }
 
 
-.products.main .item {
+.products.main .item, .widgets .row {
   flex: 0 0 25%;
 
 }
@@ -1570,6 +1612,12 @@ nav .mega .product .text-content h4 {
 
 .banner .row {
   flex: 0 0 50%;
+}
+
+.newsletter .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
     
@@ -1639,6 +1687,10 @@ nav .mega .product .text-content h4 {
   
   }
 
+  .product-catagories .item {
+    min-height: 350px;
+  }
+
   
 
  
@@ -1656,8 +1708,6 @@ nav .mega .product .text-content h4 {
 
 
 @media screen and (max-width: 767px) {
-  
-
   
 
   .desktop-hide {
@@ -1740,7 +1790,7 @@ nav .mega .product .text-content h4 {
   
   }
   
-  .trending .products.mini, .banner .row {
+  .trending .products.mini, .banner .row, .widgets .row {
     flex: 0 0 50%;
   
   }
@@ -1762,6 +1812,13 @@ nav .mega .product .text-content h4 {
   }
 
 
+  .product-catagories .item {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
   
   
 
@@ -1777,19 +1834,34 @@ nav .mega .product .text-content h4 {
 
   @media screen and (max-width: 590px) {
 
-    .products.main .item {
-      flex: 0 0 50%;
 
-    }
+    
+  form {
+    position: relative;
+
+  }
 
 
-    .trending .products.big .item {
-      margin: 1em 1em 2em;
-    }
+  .newsletter {
+    padding: 2em .5em ;
+  }
 
-    .products.main .item, .product-catagories .row, .banner .row {
-      flex: 0 0 100%;
-    } 
+  
+  .products.main .item {
+    flex: 0 0 50%;
+
+  }
+
+
+  .trending .products.big .item {
+    margin: 1em 1em 2em;
+  }
+
+  .products.main .item, .product-catagories .row, .banner .row {
+    flex: 0 0 100%;
+  } 
+
+
   
 
     
@@ -1868,6 +1940,10 @@ nav .mega .product .text-content h4 {
   .trending .products.big .item {
     margin: 1em 1em 1em;
 
+  }
+
+  .widgets .row {
+    flex: 0 0 100%;
   }
   
   
