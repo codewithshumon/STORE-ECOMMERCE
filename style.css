@@ -184,6 +184,11 @@ h4 {
   display: flex;
 }
 
+.mini-text {
+  font-size: var(--font-smaller);
+  color: light var(--light-text-color);
+}
+
 
 
 
@@ -452,6 +457,7 @@ Structure Styling
   font-size: 1.25em;
   width: 32px;
   height: 32px;
+  border-radius: var(--percent100);
   background-color: var(--secondary-dark-color);
   color: var(--white-color);
   transition: var(--trans-background-color);
@@ -460,7 +466,6 @@ Structure Styling
 .t-close:hover {
   background-color: var(--white-color);
   color: var(--secondary-dark-color);
-  border-radius: var(--percent100);
   opacity: .6;
 }
 
@@ -1153,18 +1158,153 @@ form.search button:hover {
   /* 05. BANNER
   c. Footer Info */
 
+  .footer-info {
+    padding: 3em 0 5em;
+  }
+
+  .footer-info .wrapper .flexcol {
+    align-items: center;
+  }
+
+  .footer-info ul li a {
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-bg-color);
+    border-radius: var(--percent50);
+    margin: .5em;
+    transition: var(--trans-background);
+  }
+
+  .footer-info ul li a:hover {
+    background-color: var(--border-color);
+  }
+
+  .footer-info .mini-text {
+    margin-top: 2em;
+    text-align: center;
+  }
+  .footer-info .logo a {
+    margin-right: 0;
+
+  }
+
+
+
 
 
 
 /* 
-06. BOTTOM MANU
-  a. Search  */
+06. BOTTOM MANU */
 
+.menu-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--white-color);
+  box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
+  z-index: 900;
+  
+}
+
+.menu-bottom nav li {
+  flex: 1;
+}
+
+.menu-bottom nav li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0;
+  color: var(--secondary-dark-color);
+  transition: var(--trans-color);
+}
+
+.menu-bottom nav li a:hover {
+  color: var(--dark-color);
+}
+
+.menu-bottom nav li a span {
+  font-size: var(--font-smaller);
+}
+
+.menu-bottom nav li a i {
+  font-size: 1.25em;
+}
+
+.menu-bottom .fly-item {
+  position: absolute;
+  top: 5px;
+  width: 16px;
+  font-size: 10px;
+  border-radius: var(--percent50);
+  margin-right: -20px;
+  background-color: var(--secondary-dark-color);
+}
+
+
+
+
+  /* a. Search Bottom  */
+
+  .search-bottom {
+    position: fixed;
+    bottom: 60px;
+    width: var(--percent100);
+    padding: 2.5em 0;
+    background-color: var(--secondary-dark-color);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility, opacity;
+
+  }
+  .showsearch .search-bottom {
+    visibility: inherit;
+    opacity: 1;
+  }
+
+  .search-bottom .t-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 1000;
+  }
+
+
+  .search-bottom form.search  input {
+    padding: .5em 3.5em;
+  }
+  .search-bottom form.search  span {
+    padding: 0 1em;
+  }
 
 
 
 
   /* 07. OVERLAY */
+  .overlay {
+    position: fixed;
+    width: var(--percent100);
+    height: var(--percent100);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .showmenu .overlay {
+    visibility: inherit;
+    opacity: 1;
+  }
 
 
 
@@ -1497,11 +1637,6 @@ nav .mega .product .text-content h4 {
     align-items: center;
   }
 
-
-  .mini-text {
-    font-size: var(--font-smaller);
-    color: light var(--light-text-color);
-  }
 
   .header-main .right {
     flex: 1;

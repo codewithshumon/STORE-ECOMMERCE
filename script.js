@@ -63,3 +63,18 @@ const swiper = new Swiper(".swiper", {
   },
   
 });
+
+
+
+// show search bottom
+const searchBottom = document.querySelector('.t-close');
+const tClose = document.querySelector('.search-close');
+const showClass = document.querySelector('.site');
+
+searchBottom,addEventListener('click', function() {
+  showClass.classList.toggle('showsearch')
+})
+tClose.addEventListener('click', function() {
+  showClass.classList.toggle('showsearch')
+})
+
