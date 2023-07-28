@@ -397,6 +397,19 @@ Structure Styling
 /* 01. HEADER
   e. Responsive Manu off canvas */
 
+  .header-nav.stickey {
+    position: fixed;
+    top: 0;
+    background-color: var(--white-color);
+    width: var(--percent100);
+    z-index: 1000;
+    margin: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid var(--border-color);
+
+  }
+
+
 
 /*   
 .site .site-off {
@@ -1594,6 +1607,10 @@ nav .mega .product .text-content h4 {
 
 
 
+
+
+
+
 /* 01. HEADER
   c. Header Main, Departments Catagory */
 
@@ -1895,6 +1912,10 @@ nav .mega .product .text-content h4 {
     display: flex;
     font-weight: var(--fw6);
   }
+
+  .header-nav.stickey .iscart {
+    top: 20px;
+  }
   
   .header-nav .iscart {
     position: absolute;
@@ -2023,13 +2044,16 @@ nav .mega .product .text-content h4 {
   .mobile-hide {
     display: none;
   }
-  
+
+
   .header-nav {
     padding: 0;
     margin: 0;
     border-bottom: 0;
+
   }
-  
+
+     
   .header-nav .right li > a {
     margin-left: 1em;
   }

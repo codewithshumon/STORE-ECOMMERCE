@@ -19,8 +19,10 @@ function copyMenu() {
 
 copyMenu();
 
-//show mobile menu
 
+
+
+//show mobile menu
 const menuButton = document.querySelector(".trigger");
 const closeButton = document.querySelector(".t-close");
 const addClass = document.querySelector(".site");
@@ -32,6 +34,10 @@ menuButton.addEventListener("click", function () {
 closeButton.addEventListener("click", function () {
   addClass.classList.toggle("showmenu");
 });
+
+
+
+
 
 //show sub menu on mobile
 const subMenu = document.querySelectorAll(".has-chaild .icon-small");
@@ -50,6 +56,8 @@ function toggle(e) {
   }
 }
 
+
+
 // Initialize Swiper
 const swiper = new Swiper(".swiper", {
   autoplay: {
@@ -66,15 +74,36 @@ const swiper = new Swiper(".swiper", {
 
 
 
+
+
 // show search bottom
-const searchBottom = document.querySelector('.t-close');
+const searchButton = document.querySelector('.t-search');
 const tClose = document.querySelector('.search-close');
-const showClass = document.querySelector('.site');
+const showClass = document.querySelector('.site')
 
-searchBottom,addEventListener('click', function() {
-  showClass.classList.toggle('showsearch')
-})
-tClose.addEventListener('click', function() {
-  showClass.classList.toggle('showsearch')
-})
 
+searchButton.addEventListener('click', function () {
+  showClass.classList.toggle('showsearch')
+});
+
+tClose.addEventListener('click', function (e) {
+  e.preventDefault()
+  showClass.classList.remove('showsearch')
+});
+
+
+
+//stikey header
+
+const stickeyHeader = document.querySelector('.header-nav');
+const scrollWather = document.createElement('div');
+
+scrollWather.setAttribute('watcher', '');
+stickeyHeader.before(scrollWather);
+
+const headerObserver = new IntersectionObserver((entrise) => { 
+  stickeyHeader.classList.toggle('stickey', !entrise[0].isIntersecting)
+}, {rootMargin: "400px 0px 0px 0px"});
+
+
+headerObserver.observe(scrollWather)
