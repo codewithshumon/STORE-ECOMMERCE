@@ -405,8 +405,13 @@ Structure Styling
     z-index: 1000;
     margin: 0;
     padding-bottom: 0;
+    height: 80px;
     border-bottom: 1px solid var(--border-color);
 
+  }
+
+  .header-nav.stickey .mega {
+    top: var(--percent100);
   }
 
 
