@@ -197,7 +197,7 @@ h4 {
 
 
 
-.primary-button, .secondary-button .light-button {
+.primary-button, .secondary-button, .light-button {
   font-size: var(--font-small);
   padding: .8em;
   height: auto;
@@ -219,9 +219,9 @@ h4 {
   background-color: var(--secondary-dark-color);
   color: var(--white-color);
 }
-.secondary-button::hover{
-  background-color: var(--light-bg-color);
-  color: var(--secondary-dark-color);
+.secondary-button:hover{
+  background-color: var(--primary-color);
+  color: var(--white-color);
 
 }
 
@@ -1453,6 +1453,9 @@ form.search button:hover {
     border-radius: 7px;
   }
 
+
+
+
   /* lightbox: fslightbox.com */
 
 
@@ -1608,6 +1611,7 @@ form.search button:hover {
     text-transform: uppercase;
     padding: 1em 1.25em;
     border-top: 1px solid var(--border-color);
+    gap: 1em;
   }
 
   .products .collapse .has-chaild > a::before {
@@ -1679,6 +1683,64 @@ form.search button:hover {
 
   /* 08. PAGE SINGLE
   e. Product Review form */
+
+  .products .reviews h4 {
+    font-size: 2em;
+    color: var(--light-text-color);
+    padding-top: 1em;
+    margin: 1em 0 .5em;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .products .review-block {
+    color: initial;
+  }
+
+  .products .review-block-head > a {
+    display: block;
+    font-size: 1.25em;
+    width: var(--percent100);
+    margin-top: 1em;
+    text-align: center;
+  }
+  .products .review-block-head .rate-sum {
+    position: relative;
+    font-size: 4em;
+    font-weight: var(--fw7);
+    padding-right: .5em;
+  }
+
+  .products .review-block-head .rate-sum::before {
+    content: '';
+    width: 2px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    transform: rotate(22deg);
+    background-color: var(--border-color);
+  }
+
+  .products .review-block-body .item {
+    gap: 1em;
+    padding-bottom: 2.5em;
+    margin-top: 3.5em;
+  }
+
+  .products .review-block-body :where(.person, .review-title) {
+    font-weight: var(--fw7) ;
+    text-transform: uppercase;
+  }
+
+  .products .review-block-body :where(.review-title, .view-all) {
+    font-size: 1.25em;
+    justify-content: end;
+  }
+
+  .products .review-block-body .item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+  }
 
 
 
@@ -1754,7 +1816,7 @@ form.search button:hover {
 
 
 
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) {
 
   .desktop-hide {
     display: none;
@@ -2109,10 +2171,14 @@ nav .mega .product .text-content h4 {
 
 
 
-
   .products.one .row {
     flex: 0 0 50%;
     width: 50%;
+  }
+
+  .products.one .is-sticky, .is-sticky {
+    position: sticky;
+    top: 2em;
   }
 
   
