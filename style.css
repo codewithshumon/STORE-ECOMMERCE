@@ -186,7 +186,7 @@ h4 {
 
 .mini-text {
   font-size: var(--font-smaller);
-  color: light var(--light-text-color);
+  color: var(--light-text-color);
 }
 
 
@@ -1328,8 +1328,47 @@ form.search button:hover {
 
 
 
+  /* 08. PAGE SINGLE*/
+
+
+
+
+  /* 08. PAGE SINGLE
+  a. department menu */
+  .page-home .dpt-cart .dpt-trigger, 
+  .dpt-trigger .ri-close-line, 
+  .showdpt .dpt-trigger .ri-menu-3-line {
+    display: none;
+  }
+
+  .showdpt .dpt-trigger .ri-close-line {
+    display: block;
+  }
+
+
+
+
+
   /* 08. PAGE SINGLE
   a. Breadcrumb */
+
+  .breadcrumb {
+    font-size: var(--font-small);
+    margin: 2em 0;
+  }
+
+  .breadcrumb li:not(:last-child)::after {
+    content: ">";
+    padding: 0 .5em;
+  }
+
+  .breadcrumb li:last-child {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--light-text-color);
+  }
 
 
 
@@ -1338,12 +1377,292 @@ form.search button:hover {
   /* 08. PAGE SINGLE
   b. Product details */
 
+  .products.one .item {
+    flex-direction: column;
+  }
+
+  .products.one .price .discount {
+    font-size: 1em;
+    font-weight: var(--fw7);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    padding: 1em;
+    z-index: 2;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: var(--percent50);
+    margin: .5em;
+
+  }
+
+  .products.one :where(.big-image, .small-image) {
+    overflow: hidden;
+  }
+
+  .products.one :where(.big-image, .small-image) img {
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+  }
+
+  .products.one .big-image {
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  .products.one .thumbnail-show {
+    position: relative;
+    max-width: 130px;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 2em 3em 0;
+ 
+  }
+
+  .products.one .big-image {
+    margin-bottom: 2em;
+  }
+  .products.one .image-show {
+    height: 680px;
+  }
+
+  .products :is(.swiper-button-next, .swiper-button-prev) {
+    font-size: 1.5em;
+    outline: 0;
+    color: var(--secondary-dark-color);
+    transition: var(--trans-background) transform .3s;
+  }
+
+  .products :is(.swiper-button-next, .swiper-button-prev)::after {
+    font-size: 1.5em;
+  }
+
+  .products .big-image:hover .swiper-button-next {
+    transform: translateX(-10px);
+  }
+
+  .products .big-image:hover .swiper-button-prev {
+    transform: translateX(10px);
+  }
+
+  .products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
+    background-color: var(--light-bg-color);
+    border-radius: 7px;
+  }
+
+  /* lightbox: fslightbox.com */
+
+
+
 
 
 
 
   /* 08. PAGE SINGLE
   c. Product Discription */
+
+  .products.one .available {
+    font-size: var(--font-small);
+    font-weight: var(--fw5);
+    padding: .5em;
+    margin-top: 1em;
+    border-radius: 4px;
+    color: #10ac84;
+    background-color: var(--light-bg-color);
+  }
+
+  .products.one .add-review {
+    color: var(--dark-color);
+  }
+
+  .products.one .price {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .products.one .current {
+    font-size: 2.5em;
+  }
+
+  .products .variant form {
+    display: flex;
+    margin-top: .5em;
+  }
+
+  .products .variant form p {
+    position: relative;
+    margin: 0 .5em .5em;
+  }
+
+  .products :where(.variant, .actions) .circle {
+    display: block;
+    position: static;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .products .variant input {
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    width: 0;
+  }
+  .products .variant label::before {
+    opacity: 1;
+  }
+
+  .products .variant label[for="cogrey"]::before {
+    background-color: #576574;
+  }
+  .products .variant label[for="coblue"]::before {
+    background-color: #45a0ff;
+  }
+  .products .variant label[for="cogreen"]::before {
+    background-color: #1dd1a1;
+  }
+
+  .products .variant form p input:checked + label {
+    background-color: transparent;
+    border: 2px solid var(--dark-color);
+    color: var(--white-color);
+  }
+
+  .products .sizes .variant label::before {
+    background-color: var(--white-color);
+  }
+
+  .products .sizes .variant label span {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: var(--percent100);
+    height: var(--percent100);
+    font-size: .85em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .products .sizes .variant form p input:checked + label::before {
+    background-color: var(--dark-color);
+    opacity: 1;
+  }
+
+  .products .actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+
+  .products .qty-control {
+    width: fit-content;
+    padding: .5em;
+    border: 1px solid var(--border-color);
+    margin: 0 2em 2em 0;
+    border-radius: 5px;
+  }
+
+  .products .qty-control button::before {
+    background-color: transparent;
+  }
+
+  .products .actions :where(input, button) {
+    font-size: 1.25em;
+    outline: 0;
+    border: 0;
+  }
+
+  .products .actions input {
+    max-width: 100px;
+    text-align: center;
+  }
+
+  .products .actions .button-cart {
+    flex: 1;
+    min-width: 200px;
+  }
+  .products .actions .button-cart button {
+    min-width: var(--percent100);
+    cursor: pointer;
+  }
+
+  .wish-share a {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: var(--fw7);
+    margin: 1em 2em 1em 0;
+  }
+
+  .products .collapse .has-chaild > a {
+    position: relative;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+    padding: 1em 1.25em;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .products .collapse .has-chaild > a::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+  }
+
+  .products .collapse .content {
+    margin: 0 0 1.5em 2em;
+    font-size: var(--font-small);
+  }
+
+  .products .collapse .content li span:first-child {
+    min-width: 100px;
+    display: inline-flex;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+  }
+
+  .products .collapse table {
+    line-height: 3em;
+  }
+
+  .products .collapse table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--dark-color);
+  }
+
+  .products .collapse table :where(th, td) {
+    border-bottom: 1px solid var(--border-color);
+    padding-left: 2em;
+  }
+
+  .products .collapse .content {
+    display: none;
+  }
+
+  .products .collapse .expand .content {
+    display: flex;
+  }
+  
+  .products .collapse .expand > a::before {
+    content: '-';
+  }
+  
+
+
+
+
+
+
+  
+
+
 
 
 
@@ -1777,6 +2096,28 @@ nav .mega .product .text-content h4 {
   align-items: center;
 }
 
+
+  /* page single */
+  #page:not(.page-home) .dpt-menu {
+    display: none;
+  }
+  #page.showdpt .dpt-menu {
+    display: block;
+  }
+
+
+
+
+
+
+  .products.one .row {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  
+  
+
     
 
 }
@@ -2109,8 +2450,9 @@ nav .mega .product .text-content h4 {
   .widgets .row {
     flex: 0 0 100%;
   }
-  
-  
+
+
+
   
   
   

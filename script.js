@@ -94,7 +94,6 @@ tClose.addEventListener('click', function (e) {
 
 
 //stikey header
-
 const stickeyHeader = document.querySelector('.header-nav');
 const scrollWather = document.createElement('div');
 
@@ -107,3 +106,42 @@ const headerObserver = new IntersectionObserver((entrise) => {
 
 
 headerObserver.observe(scrollWather)
+
+
+
+//show dpt menu
+const dptButton = document.querySelector('.dpt-cart .dpt-trigger'),
+      dptClass = document.querySelector('.site');
+
+dptButton.addEventListener('click', () => {
+  dptClass.classList.toggle('showdpt')
+});
+
+
+
+//product image slider
+const productThumb = new Swiper ('.small-image', {
+  loop: true,
+  speaceBetween: 10,
+  slidesPerView: 3,
+  freeMood: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    590: {
+      speaceBetween: 10
+    }
+  }
+
+});
+
+const productBig = new Swiper ('.big-image', {
+  loop: true,
+  autoHeight: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: productThumb
+  }
+})
