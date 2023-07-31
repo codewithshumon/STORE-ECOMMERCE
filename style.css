@@ -117,6 +117,8 @@ h4 {
     padding: 0 2em;
 }
 
+
+
 .column {
     margin-left: -0.94em;
     margin-right: -0.94em;    
@@ -1660,15 +1662,7 @@ form.search button:hover {
   
 
 
-
-
-
-
-  
-
-
-
-
+  /* 08. PAGE SINGLE */
 
 
 
@@ -1677,12 +1671,6 @@ form.search button:hover {
   /* 08. PAGE SINGLE
   d. Product Review */
 
-
-
-
-
-  /* 08. PAGE SINGLE
-  e. Product Review form */
 
   .products .reviews h4 {
     font-size: 2em;
@@ -1741,6 +1729,72 @@ form.search button:hover {
   .products .review-block-body .item:not(:last-child) {
     border-bottom: 1px solid var(--border-color);
   }
+
+
+  
+
+  /* 08. PAGE SINGLE
+  e. Product Review form */
+
+  .review-form .rating {
+    flex-wrap: wrap;
+  }
+
+  .review-form p {
+    font-size: 1.25em;
+    margin-right: 1em;
+  }
+
+  .review-form .rate-this input {
+    display: none;
+  }
+
+  .review-form .rate-this label {
+    float: right;
+    font-size: 2em;
+    color: var(--secondary-dark-color);
+  }
+
+  .rate-this > input:checked ~ label,
+  .rate-this:not(:checked) > label:hover,
+  .rate-this:not(:checked) > label:hover ~ label {
+    color: #f1c40e;
+  }
+
+  .rate-this > input:checked + label:hover,
+  .rate-this > input:checked ~ label:hover,
+  .rate-this > label:hover ~ input:checked ~ label,
+  .rate-this > input:checked ~ label:hover ~ label {
+    color: #ffed85;
+  }
+
+  .review-form form {
+    margin-top: 2.5em;
+  }
+
+  form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+
+  form :where(input, textarea) {
+    line-height: 1;
+    padding: 1em;
+    border: 1px solid var(--border-color);
+    outline: 0;
+  }
+
+  form label {
+    font-weight: var(--fw7);
+    margin-top: .5em;
+    text-transform: uppercase;
+  }
+
+
+
+
+
 
 
 
@@ -1815,9 +1869,8 @@ form.search button:hover {
 
 
 
-
 @media screen and (min-width: 768px) {
-
+  
   .desktop-hide {
     display: none;
   }
@@ -2184,10 +2237,7 @@ nav .mega .product .text-content h4 {
   
   
 
-    
-
 }
-
 
 
 
@@ -2212,6 +2262,8 @@ nav .mega .product .text-content h4 {
     flex-basis: calc(33.33% - 10px);
   }
   
+
+  
   .products.mini .media {
     min-width: 70px;
     min-height: 100px;
@@ -2220,7 +2272,7 @@ nav .mega .product .text-content h4 {
     margin-right: 1.25em;
   }
 
-  .products .content {
+  .trending .products .content {
     min-width: 50px;
     min-height: 100px;
     max-height: 200px;
@@ -2254,11 +2306,7 @@ nav .mega .product .text-content h4 {
   .product-catagories .item {
     min-height: 350px;
   }
-
-  
-
  
-
 
 
 }
@@ -2387,8 +2435,12 @@ nav .mega .product .text-content h4 {
   }
 
 
-  
-  
+  .products.one .row {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+  }
+
 
 
   
