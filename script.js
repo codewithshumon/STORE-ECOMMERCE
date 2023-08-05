@@ -160,4 +160,35 @@ for (let x = 0; x < stocks.length; x++) {
 }
 
 
+
+//filter show page category
+
+// const filter = '.filter' "if you add this line"
+const ftrShow = document.querySelector('.filter');
+const ftrTrigger = document.querySelector('.filter-trigger');
+
+
+ftrTrigger.addEventListener('click', () => {
+  setTimeout(() => {
+    if(!ftrShow.classList.contains('show')) {
+      ftrShow.classList.add('show')
+    }
+  }, 250)
+})
+
+document.addEventListener('click', (e) => {
+  if(ftrShow.classList.contains('show')) {
+    ftrShow.classList.remove('show')
+  }
+})
+//"you need to add those line"
+// document.addEventListener('click', (e) => {
+//   const isClosest = e.target.closest(filter)
+//   if(!isClosest && ftrShow.classList.contains('show')) {
+//     ftrShow.classList.remove('show')
+//   }
+// })
+
+
+
  
