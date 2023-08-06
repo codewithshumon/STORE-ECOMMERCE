@@ -246,7 +246,7 @@ h4 {
 }
 
 
-nav .fly-item {
+.fly-item {
   position: relative;
   width: 32px;
   height: 18px;
@@ -259,6 +259,12 @@ nav .fly-item {
   line-height: 10px;
   color: var(--white-color);
   z-index: -1;
+}
+
+.right .fly-item .item-number {
+  position: absolute;
+  top: 5px;
+  left: 7px;
 }
 
 
@@ -2421,8 +2427,6 @@ form.search button:hover {
     visibility: visible;
     opacity: 1;
  }
-
-
 
 
  
