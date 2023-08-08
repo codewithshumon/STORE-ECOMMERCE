@@ -2085,7 +2085,7 @@ form.search button:hover {
   position: relative;
 }
 
-.mini-cart .products img {
+:is(.mini-cart .products, .products.cart) .thumbnail img {
   transform: none;
 }
 
@@ -2113,7 +2113,7 @@ form.search button:hover {
 
 }
 
-.mini-cart .thumbnail {
+:where(.mini-cart, .products.cart) .thumbnail {
   position: relative;
   width: 60px;
   height: 60px;
@@ -2161,6 +2161,31 @@ form.search button:hover {
 
 
 /* 12. PAGE CART */
+.products.cart .form-cart {
+  max-width: 66%;
+  
+}
+
+.products.cart .cart-summry {
+  max-width: 34%;
+  padding-left: 2.5em;
+  margin-top: 0;
+}
+
+
+.products.cart form {
+  width: var(--percent100);
+}
+
+.products.cart table thead th {
+  vertical-align: middle;
+  background-color: var(--light-bg-color);
+}
+
+.products.cart table :where(th, td) {
+  padding: 2em 1em;
+  text-align: center;
+}
 
 
 
