@@ -173,10 +173,10 @@ ftrTrigger.addEventListener('click', () => {
     if(!ftrShow.classList.contains('show')) {
       ftrShow.classList.add('show')
     }
-  }, 250)
+  }, 100)
 })
 
-document.addEventListener('click', (e) => {
+document.addEventListener('click', () => {
   if(ftrShow.classList.contains('show')) {
     ftrShow.classList.remove('show')
   }
@@ -191,4 +191,20 @@ document.addEventListener('click', (e) => {
 
 
 
+// show mobile cart on click
+const divPopup = document.querySelector('.mini-cart');
+const divTrigger = document.querySelector('.cart-trigger')
  
+divTrigger.addEventListener('click', () => {
+  setTimeout(() => {
+    if(!divPopup.classList.contains('show')) {
+      divPopup.classList.add('show');
+    }
+  }, 100)
+});
+
+document.addEventListener('click', () => {
+  if(divPopup.classList.contains('show')) {
+    divPopup.classList.remove('show')
+  }
+});
