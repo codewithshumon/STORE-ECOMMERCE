@@ -2473,7 +2473,48 @@ form.search button:hover {
 
 
 /* 14. MODAL  */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 500px;
+  width: 80%;
+  height: 95%;
+  padding: 1em 1.5em;
+  margin: auto;
+  text-align: center;
+  background-color: var(--light-bg-color);
+  z-index: 1000;
+}
 
+.modal .image {
+  position: relative;
+  height: calc(150px + 10vw);
+  overflow: hidden;
+  max-height: 400px;
+  margin: -1.5em -1.5em 0 -1.5em;
+}
+
+.modal h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  max-width: 400px;
+  margin: .5em auto;
+  line-height: 1;
+}
+
+.modal p {
+  margin-bottom: 1em;
+  color: lightslategray;
+}
+
+.modal .t-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
 
 
 
