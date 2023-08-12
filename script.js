@@ -197,9 +197,9 @@ document.addEventListener('click', () => {
 
 
 // show modal on window load
-window.onload = () => {
-  document.querySelector('.site').classList.toggle('showmodal')
-};
-document.querySelector('.modalclose').addEventListener('click', () => {
-  document.querySelector('.site').classList.remove('showmodal')
-});
+// window.onload = () => {
+//   document.querySelector('.site').classList.toggle('showmodal')
+// };
+// document.querySelector('.modalclose').addEventListener('click', () => {
+//   document.querySelector('.site').classList.remove('showmodal')
+// });

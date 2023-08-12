@@ -845,6 +845,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
     <script src="./script.js"></script>
+    <script>
+        // show modal on window load
+        window.onload = () => {
+            document.querySelector('.site').classList.toggle('showmodal')
+        };
+        document.querySelector('.modalclose').addEventListener('click', () => {
+            document.querySelector('.site').classList.remove('showmodal')
+        });
+    </script>
 </body>
 </html>
 
