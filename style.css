@@ -1328,7 +1328,7 @@ form.search button:hover {
     opacity: 0;
   }
 
-  .showmenu .overlay {
+  :where(.showmenu, .showmodal) .overlay {
     visibility: inherit;
     opacity: 1;
   }
@@ -2487,7 +2487,19 @@ form.search button:hover {
   text-align: center;
   background-color: var(--light-bg-color);
   z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform .3s, visibility .3s, opacity .3s;
 }
+
+.showmodal .modal {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform .5s, visibility .5s, opacity .5s;
+}
+
 
 .modal .image {
   position: relative;
@@ -2519,11 +2531,34 @@ form.search button:hover {
 
 
 
+/* 15. back to top */ 
+.backtotop a {
+  position: fixed;
+  bottom: 3em;
+  right: 2em;
+  text-align: center;
+  gap: 0;
+  font-size: var(--font-small);
+  padding: .5em 1em;
+  border-radius: 4px;
+  z-index: 999;
+  background-color: var(--border-color);
+  transition: var(--trans-background-color);
+}
+
+
+.backtotop a:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+
+
+
+
+
+
 /* 15. RESPONSIVE */ 
-
-
-
-
 /* max screen styled */
 
 

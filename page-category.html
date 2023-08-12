@@ -1145,6 +1145,25 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
     <script src="./script.js"></script>
+    <script>
+        //filter show page category
+        const ftrShow = document.querySelector('.filter');
+        const ftrTrigger = document.querySelector('.filter-trigger');
+        ftrTrigger.addEventListener('click', () => {
+            setTimeout(() => {
+                if(!ftrShow.classList.contains('show')) {
+                    ftrShow.classList.add('show')
+                }
+            }, 100)
+        })
+
+        document.addEventListener('click', () => {
+            if(ftrShow.classList.contains('show')) {
+                ftrShow.classList.remove('show')
+            }
+
+        })
+    </script>
 </body>
 </html>
 

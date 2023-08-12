@@ -161,36 +161,6 @@ for (let x = 0; x < stocks.length; x++) {
 
 
 
-//filter show page category
-
-// const filter = '.filter' "if you add this line"
-const ftrShow = document.querySelector('.filter');
-const ftrTrigger = document.querySelector('.filter-trigger');
-
-
-ftrTrigger.addEventListener('click', () => {
-  setTimeout(() => {
-    if(!ftrShow.classList.contains('show')) {
-      ftrShow.classList.add('show')
-    }
-  }, 100)
-})
-
-document.addEventListener('click', () => {
-  if(ftrShow.classList.contains('show')) {
-    ftrShow.classList.remove('show')
-  }
-})
-//"you need to add those line"
-// document.addEventListener('click', (e) => {
-//   const isClosest = e.target.closest(filter)
-//   if(!isClosest && ftrShow.classList.contains('show')) {
-//     ftrShow.classList.remove('show')
-//   }
-// })
-
-
-
 // show mobile cart on click
 const divPopup = document.querySelector('.mini-cart');
 const divTrigger = document.querySelector('.cart-trigger')
@@ -207,4 +177,29 @@ document.addEventListener('click', () => {
   if(divPopup.classList.contains('show')) {
     divPopup.classList.remove('show')
   }
+});
+//another way
+// const filter = '.filter' "if you add this line"
+// const ftrShow = document.querySelector('.filter');
+// const ftrTrigger = document.querySelector('.filter-trigger');
+
+
+//"you need to add those line"
+// document.addEventListener('click', (e) => {
+//   const isClosest = e.target.closest(filter)
+//   if(!isClosest && ftrShow.classList.contains('show')) {
+//     ftrShow.classList.remove('show')
+//   }
+// })
+
+
+
+
+
+// show modal on window load
+window.onload = () => {
+  document.querySelector('.site').classList.toggle('showmodal')
+};
+document.querySelector('.modalclose').addEventListener('click', () => {
+  document.querySelector('.site').classList.remove('showmodal')
 });
