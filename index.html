@@ -1437,7 +1437,8 @@
         window.onload = () => {
             document.querySelector('.site').classList.toggle('showmodal')
         };
-        document.querySelector('.modalclose').addEventListener('click', () => {
+        document.querySelector('.modalclose').addEventListener('click', (e) => {
+            e.preventDefault();
             document.querySelector('.site').classList.remove('showmodal')
         });
     </script>
